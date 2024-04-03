@@ -1,0 +1,19 @@
+caption: {{$:/plugins/oeyoews/tiddlywiki-random-tip/icon}} random tips
+created: 20240403063426851
+description: add random tip
+modified: 20240403063426851
+tags: $:/tags/PageControls
+title: $:/plugins/oeyoews/tiddlywiki-random-tip/ui/add-new-random-tip
+
+\whitespace trim
+<$button message="add new random tip" tooltip="" aria-label="" class=<<tv-config-toolbar-class>>>
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/plugins/oeyoews/tiddlywiki-random-tip/icon}}
+<$action-sendmessage $message="tm-new-tiddler" $param="$:/plugins/oeyoews/tiddlywiki-random-tip/empty-template" title=<<now "[UTC]tips-YYYY0MM0DD0hh0mm0ssXXX">> tags="Tiddlywiki5Tip"/>
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text">
+<$text text="add new random tip"/>
+</span>
+</$list>
+</$button>
